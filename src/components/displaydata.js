@@ -16,7 +16,7 @@ let DisplayData = ({ data, userdata, message, setdata }) => {
     //     }
     // })
 
-    let arr = data.filter((iteam) => iteam.Name.includes(e.target.value));
+    let arr = data.filter((iteam) => (iteam.Name.toLowerCase()).includes(((e.target.value).toLowerCase())));
     setnewdata(arr);
   }
   console.log(newData);
