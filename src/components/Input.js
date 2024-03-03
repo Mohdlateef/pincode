@@ -12,6 +12,11 @@ getuserInput(e.target.value)
 }
 function formsubmit(e){
     e.preventDefault();
+    if(userInput==""){
+        alert("please enter pincode")
+        return;
+    }
+ 
     setuserData(userInput)
 let url=`https://api.postalpincode.in/pincode/${userInput}`
 console.log(url)
